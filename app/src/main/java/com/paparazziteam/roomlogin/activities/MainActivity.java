@@ -54,21 +54,48 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            //call register method
-                            mUserDao.registerUser(mUser);
+                            User user = mUserDao.consultarMatricula(mUser.getMatricula());
 
-                            //start UIThead to show toast
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
+                            //validar usuario registrado
+                            if(user == null)
+                            {
+                                //Registrar usuario
+                                new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
 
-                                    Toast.makeText(MainActivity.this, "Usuario Registrado!", Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                                        //call register method
+                                        mUserDao.registerUser(mUser);
 
+                                        //start UIThead to show toast
+                                        runOnUiThread(new Runnable() {
+                                            @Override
+                                            public void run() {
+
+                                                Toast.makeText(MainActivity.this, "Usuario Registrado!", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+
+
+                                    }
+                                }).start();
+                                //fin de registrar usuario
+                            }
+                            else
+                            {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(MainActivity.this, "No puedes registrarte otra vez", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+                            //fin de validar usuario registrado
 
                         }
                     }).start();
+
+
 
                 }
                 else

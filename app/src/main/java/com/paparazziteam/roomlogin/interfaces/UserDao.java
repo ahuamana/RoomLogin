@@ -20,4 +20,7 @@ public interface UserDao {
 
     @Query("Select * from users where matricula = (:Matricula) and password =(:Password)")
     User login(String Matricula, String Password);
+
+    @Query("Select * from users where matricula =(:Matricula)")
+    User consultarMatricula(String Matricula);
 }
