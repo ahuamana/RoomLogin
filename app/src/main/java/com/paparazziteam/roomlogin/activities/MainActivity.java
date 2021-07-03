@@ -58,10 +58,19 @@ public class MainActivity extends AppCompatActivity {
 
                             //call register method
                             mUserDao.registerUser(mUser);
-                            Log.e("TAG","Usuario Registrado!");
+
+                            //start UIThead to show toast
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    Toast.makeText(MainActivity.this, "Usuario Registrado!", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
 
                         }
-                    });
+                    }).start();
 
                 }
                 else
