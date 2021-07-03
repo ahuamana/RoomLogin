@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 if(validateInput(mUser))
                 {
                     //Do inset operation
-                    mAppDatabase = AppDatabase.getUserDatabase(getApplicationContext());
-                    mUserDao = mAppDatabase.userDao();
+                    mAppDatabase = AppDatabase.getUserDatabase(getApplicationContext()); // instancia a la dabase de datos
+                    mUserDao = mAppDatabase.userDao(); // crea la lista de consultar a utilizar
 
                     //start insert operation on thread, asyncronis task
 
