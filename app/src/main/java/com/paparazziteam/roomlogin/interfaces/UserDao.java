@@ -17,4 +17,7 @@ public interface UserDao {
 
     @Delete
     void delete(User user);
+
+    @Query("Select * from users where matricula = (:Matricula) and password =(:Password)")
+    User login(String Matricula, String Password);
 }
