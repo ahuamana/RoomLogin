@@ -22,10 +22,10 @@
             android:layout_marginBottom="20dp"/>
 
         <EditText
-            android:id="@+id/userid"
+            android:id="@+id/matricula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ingresar username"
+            android:hint="Ingresar matricula"
             android:layout_marginBottom="20dp"/>
 
         <EditText
@@ -36,12 +36,6 @@
             android:hint="Ingresar contraseña"
             android:layout_marginBottom="20dp"/>
 
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingresar nombre"
-            android:layout_marginBottom="20dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/register"

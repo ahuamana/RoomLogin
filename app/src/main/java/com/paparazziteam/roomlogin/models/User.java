@@ -1,39 +1,28 @@
 package com.paparazziteam.roomlogin.models;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "users")
 public class User {
-    @PrimaryKey(autoGenerate = true)
-    public Integer id;
 
-    @ColumnInfo(name = "userId")
-    public String userId;
+    @PrimaryKey
+    @ColumnInfo(name = "matricula")
+    @NonNull
+    public String matricula;
 
     @ColumnInfo(name = "password")
     public String password;
 
-    @ColumnInfo(name = "name")
-    public String name;
 
-
-
-    public Integer getId() {
-        return id;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getPassword() {
@@ -42,13 +31,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

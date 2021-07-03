@@ -16,7 +16,7 @@ import com.paparazziteam.roomlogin.models.User;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText userId, password, name;
+    EditText matricula, password, name;
     Button register;
 
     User mUser;
@@ -28,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userId = findViewById(R.id.userid);
+        matricula = findViewById(R.id.matricula);
         password = findViewById(R.id.password);
-        name = findViewById(R.id.name);
         register = findViewById(R.id.register);
 
         mUser= new User();
@@ -40,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mUser.setUserId(userId.getText().toString());
-                mUser.setName(name.getText().toString());
+                mUser.setMatricula(matricula.getText().toString());
                 mUser.setPassword(password.getText().toString());
 
                 if(validateInput(mUser))
@@ -86,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Boolean validateInput(User user)
     {
-        if(user.getName().isEmpty() || user.getUserId().isEmpty() || user.getPassword().isEmpty() )
+        if(user.matricula.isEmpty() || user.password.isEmpty())
         {
             return false;
         }else {
