@@ -25,7 +25,7 @@
             android:id="@+id/userid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ingresar UserId"
+            android:hint="Ingresar username"
             android:layout_marginBottom="20dp"/>
 
         <EditText
