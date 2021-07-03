@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,30 +18,35 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:textSize="30dp"
-            android:text="Registrarse"
+            android:text="Iniciar Session"
             android:layout_marginBottom="20dp"/>
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/matricula"
+            android:id="@+id/Lmatricula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresar matricula"
             android:layout_marginBottom="20dp"/>
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+            android:id="@+id/Lpassword"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresar contraseña"
             android:layout_marginBottom="20dp"/>
 
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/register"
+            android:id="@+id/Lbtningresar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="registrase"/>
+            android:text="Ingresar"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Lbtnregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="registrarse"/>
 
 
 
