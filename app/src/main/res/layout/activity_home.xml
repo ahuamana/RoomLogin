@@ -21,19 +21,34 @@
         android:text="Bienvenido"
         android:layout_marginBottom="20dp"/>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:text="Matricula"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:text="Matricula"
+        android:textSize="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtmatricula"
-            android:layout_width="match_parent"
-            android:text="Matricula"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtmatricula"
+        android:layout_width="match_parent"
+        android:text="Matricula"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/newpassword"
+        android:layout_width="match_parent"
+        android:hint="Nueva Contraseña"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnActualizar"
+        android:layout_width="match_parent"
+        android:text="Actualizar"
+        android:layout_height="wrap_content"/>
 
 
     </LinearLayout>

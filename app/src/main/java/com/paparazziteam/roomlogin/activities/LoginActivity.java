@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            User user = userDao.login(matriculaa,passwordd);
+                            User user = userDao.login(matriculaa,passwordd);//ejecutar consulta y guardarlo
 
                             if(user == null)
                             {
